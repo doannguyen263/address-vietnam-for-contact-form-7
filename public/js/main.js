@@ -1,8 +1,8 @@
 jQuery(function($) {
 
 	if($('select').hasClass('js-cities')){
-		var ajax_url = ctf7_address_vn_params['ajax_url']
-		var data_cities = ctf7_address_vn_params["ctf7_address_vn_city"]
+		var ajax_url = ctf7vn_params['ajax_url']
+		var data_cities = ctf7vn_params["ctf7vn_cities"]
 
 	    var $select_cities = $('.js-cities');
 	    var $select_district = $('.js-district');

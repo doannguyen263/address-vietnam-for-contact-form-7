@@ -168,14 +168,14 @@ final class CTF7_Address_VN
         wp_enqueue_script('select2', CTF7_ADDRESS_VN_ROOT_URI . '/public/libs/select2/select2.min.js', false, '0.2' );
 
 
-        wp_enqueue_style('ctf7_address_vn', CTF7_ADDRESS_VN_ROOT_URI . '/public/css/style.css', false, '0.2' );
-        wp_enqueue_script('ctf7_address_vn', CTF7_ADDRESS_VN_ROOT_URI . '/public/js/main.js', false, '0.2' );
+        wp_enqueue_style('ctf7vn', CTF7_ADDRESS_VN_ROOT_URI . '/public/css/style.css', false, '0.2' );
+        wp_enqueue_script('ctf7vn', CTF7_ADDRESS_VN_ROOT_URI . '/public/js/main.js', false, '0.2' );
 
 
-        wp_localize_script( 'ctf7_address_vn', 'ctf7_address_vn_params', array(
-         'nonce' => wp_create_nonce( 'dnuser_nonce' ), // Create nonce which we later will use to verify AJAX request
+        wp_localize_script( 'ctf7vn', 'ctf7vn_params', array(
+         'nonce' => wp_create_nonce( 'ctf7vn_nonce' ), // Create nonce which we later will use to verify AJAX request
          'ajax_url' => admin_url( 'admin-ajax.php' ),
-         'ctf7_address_vn_city' => CTF7_ADDRESS_VN_ROOT_URI.'/database/vietnam/tinh_tp.json',
+         'ctf7vn_cities' => CTF7_ADDRESS_VN_ROOT_URI.'/database/vietnam/tinh_tp.json',
          )
         );
     }
@@ -196,9 +196,9 @@ final class CTF7_Address_VN
  *
  * @return \CTF7_Address_VN
  */
-function ctf7_address_vn() {
+function ctf7vn() {
     return CTF7_Address_VN::init();
 }
 
 // kickoff
-ctf7_address_vn();
+ctf7vn();

@@ -7,7 +7,7 @@
 /**
  * custom option and settings
  */
-function wporg_settings_init() {
+function ctf7vn_settings_init() {
     // Register a new setting for "ctf7vn" page.
     register_setting( 'ctf7vn', 'ctf7vn_options' );
  
@@ -35,9 +35,9 @@ function wporg_settings_init() {
 }
  
 /**
- * Register our wporg_settings_init to the admin_init action hook.
+ * Register our ctf7vn_settings_init to the admin_init action hook.
  */
-add_action( 'admin_init', 'wporg_settings_init' );
+add_action( 'admin_init', 'ctf7vn_settings_init' );
  
  
 /**
